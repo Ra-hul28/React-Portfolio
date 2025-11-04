@@ -16,7 +16,7 @@ export default function App() {
         main: darkMode ? '#90caf9' : '#0072ff',
       },
       background: {
-        default: darkMode ? '#121212' : '#1a1a1a', // luxury dark for light mode
+        default: darkMode ? '#121212' : '#1a1a1a', 
         paper: darkMode ? '#1e1e1e' : '#ffffff',
       },
       text: {
@@ -34,12 +34,10 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box>
-        {/* Navbar */}
         <MenuAppBar toggleTheme={toggleTheme} darkMode={darkMode} />
         <br />
         <br />
 
-        {/* Sections with IDs for navigation */}
         <Box id="home">
           <Home />
         </Box>
@@ -56,7 +54,6 @@ export default function App() {
         <br />
         <br />
 
-        {/* Footer */}
         <Footer />
       </Box>
     </ThemeProvider>

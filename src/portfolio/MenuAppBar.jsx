@@ -33,13 +33,11 @@ export default function MenuAppBar({ toggleTheme, darkMode }) {
 
   const toggleDrawer = (open) => () => setDrawerOpen(open);
 
-  // Updated nav items
   const navItems = ['Home', 'About', 'Contact', 'Resume'];
 
   const handleNavClick = (item) => {
     setDrawerOpen(false);
     if (item === 'Resume') {
-      // Scroll to Download CV button inside Home
       const btn = document.querySelector('#home button');
       if (btn) btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else {

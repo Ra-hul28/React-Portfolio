@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button, useTheme } from '@mui/material';
 import rahulImage from './Rahulimage.jpeg';
-import RahulResume from './D.Rahul-resume.pdf'; // added for download functionality
+import RahulResume from './D.Rahul.pdf'; // updated resume
 
 const glowAnimation = {
   '@keyframes glow': {
@@ -13,6 +13,29 @@ const glowAnimation = {
 export default function Home() {
   const theme = useTheme();
   const isDark = theme.palette.mode === 'dark';
+
+  const projectsData = [
+    {
+      title: 'Personal Portfolio Website',
+      desc: 'Designed and developed a responsive personal portfolio to showcase projects and skills with interactive UI. Integrated smooth navigation with React Router for different sections (About, Skills, Projects, Education).',
+      link: '' 
+    },
+    {
+      title: 'Movie App',
+      desc: 'Developed a responsive Movie App with dynamic listings, scrollable category carousels, modals for movie details and favorites functionality.',
+      link: 'https://ra-hul28.github.io/React-Movie-App/'
+    },
+    {
+      title: 'Todo Application',
+      desc: 'Developed a full-featured Todo app with CRUD functionality, task editing, login page and responsive navigation.',
+      link: 'https://ra-hul28.github.io/React-Todo-App/'
+    },
+    {
+      title: 'KTM Bike Website',
+      desc: 'Created a dynamic KTM Bike website showcasing bike models, features, and responsive design. Integrated smooth navigation, image galleries, and interactive UI components for an immersive experience.',
+      link: 'https://ra-hul28.github.io/React-Bike-Website/'
+    }
+  ];
 
   return (
     <Box
@@ -91,11 +114,10 @@ export default function Home() {
         I endeavor to seamlessly fuse aesthetic design with impeccable functionality.
       </Typography>
 
-      {/* Download CV Button: only functionality added, styles untouched */}
       <Button
         variant="contained"
-        href={RahulResume}
-        download="D.Rahul-resume.pdf"
+        href={RahulResume} // updated resume link
+        download="D.Rahul.pdf"
         sx={{
           mt: 4,
           px: 4,
@@ -124,3 +146,4 @@ export default function Home() {
     </Box>
   );
 }
+

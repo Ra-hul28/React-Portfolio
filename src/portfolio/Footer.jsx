@@ -14,16 +14,17 @@ export default function Footer() {
         px: 2,
         textAlign: 'center',
         mt: 4,
-        background: isDark ? '#1e1e1e' : '#111111', // luxury dark for light mode
+        background: isDark ? '#1e1e1e' : '#111111',
         color: '#ffffff',
-        borderTop: `1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.2)'}`,
+        borderTop: `1px solid ${
+          isDark ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.2)'
+        }`,
       }}
     >
-      {/* Social Icons */}
       <Box sx={{ mb: 1 }}>
         <IconButton
           component="a"
-          href="https://github.com/your-github"
+          href="https://github.com/Ra-hul28"
           target="_blank"
           rel="noopener noreferrer"
           sx={{ color: '#90caf9', mx: 1 }}
@@ -32,7 +33,7 @@ export default function Footer() {
         </IconButton>
         <IconButton
           component="a"
-          href="https://linkedin.com/in/your-linkedin"
+          href="https://www.linkedin.com/in/d-rahul-4a82b2374"
           target="_blank"
           rel="noopener noreferrer"
           sx={{ color: '#90caf9', mx: 1 }}
@@ -41,16 +42,15 @@ export default function Footer() {
         </IconButton>
         <IconButton
           component="a"
-          href="mailto:yourmail@example.com"
+          href="mailto:rahul28200428@gmail.com"
           sx={{ color: '#90caf9', mx: 1 }}
         >
           <Email />
         </IconButton>
       </Box>
 
-      {/* Copyright */}
       <Typography variant="body2" sx={{ fontWeight: 500 }}>
-        © {new Date().getFullYear()} Rahul | All Rights Reserved
+        © 2025 D. Rahul | All Rights Reserved
       </Typography>
     </Box>
   );

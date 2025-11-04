@@ -1,12 +1,11 @@
-import { Box, Typography, useTheme, Grid, Card, CardContent, Button } from '@mui/material';
+import { Box, Typography, useTheme, Grid, Card, CardContent, Button } from '@mui/material'; 
 import { useState } from 'react';
 
 export default function About() {
   const theme = useTheme();
   const isDark = theme.palette.mode === 'dark';
-  const [selectedSkill, setSelectedSkill] = useState('Frontend'); // default
+  const [selectedSkill, setSelectedSkill] = useState('Frontend');
 
-  // Date box style
   const dateBoxStyles = {
     border: isDark ? '2px solid #90caf9' : '2px solid #0072ff',
     borderRadius: '12px',
@@ -18,14 +17,12 @@ export default function About() {
     textAlign: 'center',
   };
 
-  // Skills data (updated)
   const skillsData = {
     Frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React'],
     Frameworks: ['Bootstrap', 'Material-UI', 'Styled Components'],
     Tools: ['Git', 'GitHub'],
   };
 
-  // Reusable heading style
   const headingStyle = {
     fontWeight: 900,
     letterSpacing: 1.5,
@@ -39,17 +36,21 @@ export default function About() {
     WebkitTextFillColor: 'transparent',
   };
 
-  // Projects data
   const projectsData = [
     {
       title: 'Personal Portfolio Website',
       desc: 'Designed and developed a responsive personal portfolio to showcase projects and skills with interactive UI. Integrated smooth navigation with React Router for different sections (About, Skills, Projects, Education).',
-      link: '' // no external link
+      link: ''
     },
     {
       title: 'Movie App',
       desc: 'Developed a responsive Movie App with dynamic listings, scrollable category carousels, modals for movie details and favorites functionality.',
       link: 'https://ra-hul28.github.io/React-Movie-App/'
+    },
+    {
+      title: 'KTM Bike Website',
+      desc: 'Developed a modern and responsive bike brand website inspired by KTM, featuring smooth navigation, engaging layouts, and a dynamic design using React and Material-UI.',
+      link: 'https://ra-hul28.github.io/React-Bike-Website/'
     },
     {
       title: 'Todo Application',
@@ -60,7 +61,6 @@ export default function About() {
 
   return (
     <>
-      {/* About Me heading */}
       <Typography
         variant="h4"
         gutterBottom
@@ -118,7 +118,7 @@ export default function About() {
             </Typography>
           </Box>
 
-          {/* Higher Secondary */}
+          {/* 12th */}
           <Box sx={{ textAlign: 'center', mb: 4 }}>
             <Box sx={dateBoxStyles}>(2020–2021)</Box>
             <Typography variant="h6" sx={{ fontWeight: 700, mt: 1 }}>
@@ -136,12 +136,11 @@ export default function About() {
             </Typography>
           </Box>
 
-          {/* SSLC */}
+          {/* 10th */}
           <Box sx={{ textAlign: 'center', mb: 4 }}>
             <Box sx={dateBoxStyles}>(2018–2019)</Box>
             <Typography variant="h6" sx={{ fontWeight: 700, mt: 1 }}>
-              Sri Vani Vidhyalaya Matriculation Higher Secondary School, Madurai
-              – 625011
+              Sri Vani Vidhyalaya Matriculation Higher Secondary School, Madurai – 625011
             </Typography>
             <Typography
               variant="body1"
@@ -160,7 +159,6 @@ export default function About() {
             Skills
           </Typography>
 
-          {/* Buttons for skills */}
           <Box sx={{ textAlign: 'center', mb: 3 }}>
             {['Frontend', 'Frameworks', 'Tools'].map((category) => (
               <Button
@@ -193,7 +191,6 @@ export default function About() {
             ))}
           </Box>
 
-          {/* Skills display */}
           <Grid container spacing={3} justifyContent="center" sx={{ mb: 4 }}>
             {skillsData[selectedSkill].map((skill, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
@@ -269,3 +266,4 @@ export default function About() {
     </>
   );
 }
+
