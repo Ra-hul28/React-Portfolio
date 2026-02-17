@@ -19,8 +19,9 @@ export default function About() {
 
   const skillsData = {
     Frontend: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React'],
-    Frameworks: ['Bootstrap', 'Material-UI', 'Styled Components'],
+    Backend: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
     Tools: ['Git', 'GitHub'],
+    Design: ['Figma']
   };
 
   const headingStyle = {
@@ -38,24 +39,24 @@ export default function About() {
 
   const projectsData = [
     {
-      title: 'Personal Portfolio Website',
-      desc: 'Designed and developed a responsive personal portfolio to showcase projects and skills with interactive UI. Integrated smooth navigation with React Router for different sections (About, Skills, Projects, Education).',
+      title: 'X-Clone',
+      desc: "Built a full-stack social media application inspired by X (Twitter). Implemented secure authentication using JWT stored in HTTP-only cookies.Developed core features including post creation,image uploads,likes,comments,follow/unfollow and notifications.Designed and protected RESTful APIs using middlewareIntegrated Cloudinary for image upload and media management. TechStack:React,Node.js,Express.js,MongoDB,JWT,Cloudinary.",
       link: ''
     },
     {
-      title: 'Movie App',
-      desc: 'Developed a responsive Movie App with dynamic listings, scrollable category carousels, modals for movie details and favorites functionality.',
-      link: 'https://ra-hul28.github.io/React-Movie-App/'
+      title: 'AC Service Website',
+      desc: 'Developed a full-stack service booking website for a real-world business use case. Implemented dynamic service pages using React Router and structured service data. Built responsive UI with modern CSS, reusable components, and smooth UX flowCreated a contact form with backend API integration and MongoDB storageIntegrated email notifications using Nodemailer for real-time enquiry alerts. Applied clean MVC architecture with controllers, models, and route Focused on scalability, maintainability, and production-ready design. TechStack:React,Node.js,Express,MongoDB,Nodemailer.',
+      link: ''
     },
     {
       title: 'KTM Bike Website',
-      desc: 'Developed a modern and responsive bike brand website inspired by KTM, featuring smooth navigation, engaging layouts, and a dynamic design using React and Material-UI.',
-      link: 'https://ra-hul28.github.io/React-Bike-Website/'
+      desc: 'Developed a modern and responsive bike brand website inspired by KTM, featuring smooth navigation, engaging layouts, and a dynamic design using React and Material-UI. TechStack:React,HTML,CSS,Javascript.',
+      link: ''
     },
     {
       title: 'Todo Application',
-      desc: 'Developed a full-featured Todo app with CRUD functionality, task editing, login page and responsive navigation.',
-      link: 'https://ra-hul28.github.io/React-Todo-App/'
+      desc: 'Developed a full-featured Todo app with CRUD functionality, task editing, login page and responsive navigation. TechStack:React,HTML,CSS,Javascript.',
+      link: ''
     },
   ];
 
@@ -160,7 +161,7 @@ export default function About() {
           </Typography>
 
           <Box sx={{ textAlign: 'center', mb: 3 }}>
-            {['Frontend', 'Frameworks', 'Tools'].map((category) => (
+            {['Frontend', 'Backend', 'Tools', 'Design'].map((category) => (
               <Button
                 key={category}
                 onClick={() => setSelectedSkill(category)}
